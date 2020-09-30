@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![SIMPLERx](https://socialify.git.ci/MLH-Fellowship/SIMPLERx/png?description=1&font=Bitter&forks=0&issues=1&logo=https%3A%2F%2Fwww.flaticon.com%2Fsvg%2Fstatic%2Ficons%2Fsvg%2F32%2F32139.svg&owner=1&pattern=Plus&pulls=0&theme=Light)
+### Forget your papers. 📝
+What if we told you that you don't need your prescriptions when you go to the doctor's? 👩‍⚕️
 
-## Available Scripts
+What if we told you your pharmacist just needs one ID card to give you all your medicines? 💊
 
-In the project directory, you can run:
+Here's SimpleRx. ✨ All the simplicity, none of the work. 😌
 
-### `yarn start`
+## ⚙️ Installation
+### 🏗️ Building dependencies
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+$ git clone git@github.com:MLH-Fellowship/SIMPLERx.git
+$ cd SIMPLERx
+$ pip3 install -r requirements.txt
+$ npm install
+```
+### 🖥️ Running the server
+To run the backend, then you use:
+```bash
+$ cd app
+$ python3 manage.py runserver
+	Starting development server at http://127.0.0.1:8000/
+```
+Finally, using `tmux` or something similar (you can use a shell script as well) to run the frontend:
+```bash
+$ npm start
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+You should be good to go! 🚀
 
-### `yarn test`
+## 🤼 About
+This project was built by [Rohan Rout](https://github.com/routrohan), [Sakshi Rambhia](https://github.com/Sakshi16) and [Ankit Maity](https://github.com/QEDK). 👷
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ⚛️🐍 Tech-stack
+This project was made with a ReactJS frontend, a Django backend, backed by a MongoDB database.
 
-### `yarn build`
+## 📜 License
+Licensed under Apache License 2.0 or later ([LICENSE](LICENSE) or https://www.apache.org/licenses/LICENSE-2.0)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### 🖊️ Contributions
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be licensed as above, without any additional terms or conditions.
