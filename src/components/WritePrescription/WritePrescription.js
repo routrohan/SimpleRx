@@ -61,7 +61,7 @@ function WritePrescription({data}) {
       
 }
     
-    const URL = 'https://69fd6781dab2.ngrok.io/signup'
+    const URL = 'https://localhost:8000/fetch_history'
      axios(URL, {
       method: 'POST',
       headers: {
