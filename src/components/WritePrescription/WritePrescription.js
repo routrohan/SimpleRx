@@ -33,33 +33,47 @@ function WritePrescription({data}) {
     
     
     const finalData = 
-        {
-          "_id":"PA1234",
-          
-          "record":{   
-            "Symptoms":symptoms,
-            "Notes": notes,
-            "Test":tests,
-            "Furthercheckups":further,
-            "Followupdetails":followup,
-            "Precription":inputFields
-          }
+    {
+      "_id":"PA9988",
+      "PatientName":"Patient",
+      "Aadhar":"123456789012",
+      "Email":"patient@gmail.com",
 
-        }
+      
+       "History":[{   
+          "Symptoms":"cough",
+          "Notes": "fever",
+          "Test":"Test 2234",
+          "Furthercheckups":"once",
+          "Followupdetails":"24-05-2020",
+          "Prescription":[{
+                  "name":"one",
+                  "dosage":"1-0-1",
+                  "duration":"4"
+              },
+            {
+              "name":"two",
+              "dosage":"okay",
+              "duration":"4"
+            }
+            ]
+       }]
+      
+}
     
-    // const URL = 'https://69fd6781dab2.ngrok.io/signup'
-    //  axios(URL, {
-    //   method: 'POST',
-    //   headers: {
-    //     'content-type': 'application/json',
-    //   },
-    //   body: finalData
-    // })
-    //   .then(response => {console.log(response.data)})
-    //   .catch(error => {
-    //     throw error;
-    //   });
-     console.log(finalData)
+    const URL = 'https://69fd6781dab2.ngrok.io/signup'
+     axios(URL, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: finalData
+    })
+      .then(response => {console.log(response.data)})
+      .catch(error => {
+        throw error;
+      });
+     //console.log(finalData)
      
 
 
