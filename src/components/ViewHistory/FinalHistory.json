@@ -6,9 +6,9 @@
             "Furthercheckups":"once",
             "Followupdetails":"24-05-2020",
             "Precription":[{
-                "name":"Crocin",
+                "name":"Enzoflam",
                 "dosage":"1-0-1",
-                "duration":"4"
+                "duration":"4 days"
             }]
     },
         
@@ -17,16 +17,16 @@
             "Notes": "Viral fever",
             "Test":"Test 1111",
             "Furthercheckups":"None",
-            "Followupdetails":"02-12-2020",
+            "Followupdetails":"02-12-2019",
             "Precription":[{
-                "name":"Paracetamol",
+                "name":"Azithral",
                 "dosage":"1-1-1",
-                "duration":"2"
+                "duration":"2 days"
             },
             {
-                "name":"Sinarest",
+                "name":"Avomin",
                 "dosage":"0-1-0",
-                "duration":"7"
+                "duration":"7 days"
             }]
     },
         
@@ -35,11 +35,11 @@
             "Notes": "allergy",
             "Test":"Test 2341",
             "Furthercheckups":"None",
-            "Followupdetails":"04-11-2020",
+            "Followupdetails":"04-11-2019",
             "Precription":[{
                 "name":"Allegra",
                 "dosage":"1-0-0",
-                "duration":"8"
+                "duration":"8 days"
             }]
         
     }

@@ -16,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login({sendData}) {
     const [email, setEmail] = useState("");
-    // const [password, setPassword] = useState("");
+    const [password, setPassword] = useState("");
     const classes = useStyles();
     
     function validateForm() {
-      return email.length > 0;
+      return email.length > 0 && password.length>0;
     }
   
     function handleSubmit(event) {
@@ -35,7 +35,7 @@ export default function Login({sendData}) {
       <div className="Login">
         <form onSubmit={handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
-            <FormLabel>Patient ID: </FormLabel>
+            <FormLabel style={{marginRight:"4px"}}>Patient ID: </FormLabel>
             <FormControl
               autoFocus
               type="text"
@@ -44,9 +44,9 @@ export default function Login({sendData}) {
             />
             
           </FormGroup>
-          {/* <br/>
+          <br/>
           <FormGroup controlId="password" bsSize="large">
-            <FormLabel>Patient ID </FormLabel>
+            <FormLabel>Password: </FormLabel>
             
             <FormControl
               value={password}
@@ -54,7 +54,7 @@ export default function Login({sendData}) {
               type="password"
             />
           </FormGroup>
-          <br/> */}
+          <br/>
           {/* <Link to="/patdashboard">
           <Button block bsSize="large" disabled={!validateForm()} type="submit" onClick={handleClick}>
             Login

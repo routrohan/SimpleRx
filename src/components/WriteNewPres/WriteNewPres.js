@@ -105,6 +105,7 @@ function WriteNewPres({data}) {
   
   return (
     <Container style={{backgroundColor:"white", opacity:"0.9"}}>
+    <h1 style={{fontFamily:"sans-serif", fontSize:"25px"}}>ADD NEW PATIENT</h1>
       
       <form className={classes.root} onSubmit={handleSubmit}>
 

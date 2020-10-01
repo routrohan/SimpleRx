@@ -18,7 +18,7 @@ import Dialog from '@material-ui/core/Dialog';
 //import AddIcon from '@material-ui/icons/Add';
 //import Typography from '@material-ui/core/Typography';
 import { blue } from '@material-ui/core/colors';
-
+import Logo from '../../Logo.jpeg'
 
 
 const emails = ['Doctor', 'Patient', 'Pharmacist'];
@@ -125,10 +125,14 @@ export default function NavBar() {
       <nav>
       <ul>
       {/* <Link to="/" style={{float:"left", fontSize:24, fontFamily:"monospace"}}>SimpleRx</Link> */}
+      
       <div className={classes.root} style={{float:"left"}}>
       <Link to='/'><Button size="large" variant="outlined" color="black">SimpleRx</Button></Link>
       </div>
       
+      {/* <img src={Logo} alt="Logo" style={{width:"100px", height:"100px"}}></img> */}
+
+
         <Button variant="contained" size="small" color="primary" onClick={handleClickOpen} style={{float:"right", marginRight:"20px ", marginTop: "22px"}}>
           Login
         </Button>

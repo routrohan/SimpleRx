@@ -34,45 +34,31 @@ function WritePrescription({data}) {
     
     const finalData = 
     {
-      "_id":"PA9988",
+      "_id":"PA33",
       "PatientName":"Patient",
       "Aadhar":"123456789012",
       "Email":"patient@gmail.com",
 
       
        "History":[{   
-          "Symptoms":"cough",
-          "Notes": "fever",
-          "Test":"Test 2234",
-          "Furthercheckups":"once",
-          "Followupdetails":"24-05-2020",
-          "Prescription":[{
-                  "name":"one",
-                  "dosage":"1-0-1",
-                  "duration":"4"
-              },
-            {
-              "name":"two",
-              "dosage":"okay",
-              "duration":"4"
-            }
-            ]
-       }]
+          "Symptoms":symptoms,
+          "Notes": notes,
+          "Test":tests,
+          "Furthercheckups":further,
+          "Followupdetails":followup,
+          "Prescription":inputFields}]
       
 }
     
-    const URL = 'http://localhost:8000/fetch_history'
-     axios(URL, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: finalData
+    
+     axios.post(`http://localhost:8000/fetch_history`, finalData)
+    .then(res=>{
+      //console.log(res.data.History[0].Prescription)
+      console.log(res.data)
+      
     })
-      .then(response => {console.log(response.data)})
-      .catch(error => {
-        throw error;
-      });
+    
+
      //console.log(finalData)
      
 
@@ -104,7 +90,7 @@ function WritePrescription({data}) {
   const [tests, setTests] = React.useState("");
   const [further, setFurther] = React.useState("");
   const [followup, setFollow] = React.useState("");
-  
+  const [ans,setAns] = React.useState();
   
   
   return (
