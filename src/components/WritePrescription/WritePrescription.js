@@ -61,7 +61,7 @@ function WritePrescription({data}) {
       
 }
     
-    const URL = 'https://localhost:8000/fetch_history'
+    const URL = 'http://localhost:8000/fetch_history'
      axios(URL, {
       method: 'POST',
       headers: {
