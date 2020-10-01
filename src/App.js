@@ -19,7 +19,7 @@ import WriteNewPres from './components/WriteNewPres/WriteNewPres'
 import ShowPrescriptionPharma from './components/ShowPrescriptionPharma/ShowPrescriptionPharma'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import ViewPatHistory from './components/ViewPatHistory/ViewPatHistory'
-import ParticleComponent from './PrticleComponent'
+//import ParticleComponent from './PrticleComponent'
 
 
 class App extends React.Component {
@@ -76,7 +76,7 @@ class App extends React.Component {
   return (
     
         <Router>
-        <div
+        {/* <div
         style={{
           position: "absolute",
           top: 0,
@@ -94,7 +94,7 @@ class App extends React.Component {
             width: "100%",
             height: "100%"
           }}
-        >
+        > */}
           <div className="App" >
             
             <NavBar />
@@ -126,8 +126,8 @@ class App extends React.Component {
             </div>
             
           </div>
-          </div>
-          </div>
+          {/* </div>
+          </div> */}
         </Router>
     
   );

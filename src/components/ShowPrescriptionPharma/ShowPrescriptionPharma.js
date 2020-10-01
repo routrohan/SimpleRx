@@ -10,6 +10,9 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button'
+import axios from 'axios'
+
+
 
 const useStyles = makeStyles({
   table: {
@@ -20,25 +23,48 @@ const useStyles = makeStyles({
 
 
 
-export default function ShowPrescriptionPharma({data}) {
+export default function ShowPrescriptionPharma({patId}) {
     const classes = useStyles();
-
-    useEffect(()=>{
-        console.log("YAAAY")
-    })
-
+    const [prescription, setPres] = React.useState()
+    //let dat={};
+    // useEffect(()=>{
+    //   const finalData = 
+    //   {
+    //     "_id":patId,
+    //     "PatientName":"",
+    //     "Aadhar":"",
+    //     "Email":"",
+  
+        
+    //      "History":[{   
+    //         "Symptoms":"",
+    //         "Notes": "",
+    //         "Test":"",
+    //         "Furthercheckups":"",
+    //         "Followupdetails":"",
+    //         "Prescription":""}]
+    //     }
+    //     axios.post(`http://localhost:8000/current_prescription`, finalData)
+    //       .then(res=>{
+    //         // setPres(res.data.History[0].Prescription)
+    //        dat = res.data
+    //       })
+          
+    // })
+     //console.log(dat)
     
 
   return (
       <div>
+    
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Patient ID</TableCell>
+            <TableCell>Patient ID : PA1234</TableCell>
             <TableCell align="right">Medicine</TableCell>
             <TableCell align="right">Dosage</TableCell>
-            <TableCell align="right">Duration(day(s))</TableCell>
+            <TableCell align="right">Duration</TableCell>
             
             
           </TableRow>
@@ -47,11 +73,11 @@ export default function ShowPrescriptionPharma({data}) {
           {Prescription.map((row) => (
             <TableRow key={row.name}>
               <TableCell component="th" scope="row">
-                {row.PID}
+                <p></p>
               </TableCell>
                 <TableCell align="right">{row.name}</TableCell>
                 <TableCell align="right">{row.dosage}</TableCell>
-                <TableCell align="right">{row.duration}</TableCell>
+                <TableCell align="right">{row.duration} days</TableCell>
               
             </TableRow>
           ))}

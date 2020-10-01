@@ -1,5 +1,5 @@
 import React from 'react';
-import FinalHistory from '../ViewHistory/FinalHistory.json'
+import FinalHistory2 from '../ViewHistory/FinalHistory2.json'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -144,8 +144,8 @@ Row.propTypes = {
 
 const rows = [];
 var i;
-for(i =0; i<FinalHistory.length; i++){
-  rows.push(createData(FinalHistory[i].Symptoms, FinalHistory[i].Notes, FinalHistory[i].Followupdetails,FinalHistory[i].Furthercheckups,FinalHistory[i].Test,"1", FinalHistory[i].Precription))
+for(i =0; i<FinalHistory2.length; i++){
+  rows.push(createData(FinalHistory2[i].Symptoms, FinalHistory2[i].Notes, FinalHistory2[i].Followupdetails,FinalHistory2[i].Furthercheckups,FinalHistory2[i].Test,"1", FinalHistory2[i].Precription))
 }
 
 
