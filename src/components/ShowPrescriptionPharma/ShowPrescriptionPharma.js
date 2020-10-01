@@ -30,9 +30,6 @@ export default function ShowPrescriptionPharma({data}) {
 
   return (
       <div>
-      <h2>
-             Hello {data}
-         </h2>
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
