@@ -60,7 +60,7 @@ export default function ShowPrescriptionPharma({data}) {
     </TableContainer>
     <br/>
         <Link to = '/'>
-            <Button color='default' variant='contained'>Home</Button>
+            <Button color='primary' variant='contained'>Home</Button>
          </Link>
     </div>
     
