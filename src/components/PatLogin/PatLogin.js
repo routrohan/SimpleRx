@@ -4,7 +4,7 @@ import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import {Link} from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-
+import axios from 'axios'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,7 +18,10 @@ export default function Login({sendData}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const classes = useStyles();
-    
+    const [checkNum, setNum] = React.useState(1)
+    const [finans, setAns] = React.useState([]);
+
+
     function validateForm() {
       return email.length > 0 && password.length>0;
     }
@@ -28,7 +31,31 @@ export default function Login({sendData}) {
     }
   
     function onClick(){
-      sendData(email)
+      //sendData(email)
+
+      const finalData = 
+    {
+      "_id":email,
+      "PatientName":"",
+      "Aadhar":"",
+      "Email":"",
+
+      
+       "History":[{   
+          "Symptoms":"",
+          "Notes": "",
+          "Test":"",
+          "Furthercheckups":"",
+          "Followupdetails":"",
+          "Prescription":""}]
+      }
+      axios.post(`http://localhost:8000/fetch_history`, finalData)
+        .then(res=>{
+          res.data === null? alert("Please enter valid Patient ID"):setNum(checkNum+1);
+          //console.log(res.data.History)
+          sendData(email)
+        })
+      
     }
 
     return (
@@ -62,7 +89,7 @@ export default function Login({sendData}) {
           </Link> */}
           <br/>
           <div className={classes.root}>
-          <Link to ='/viewpathistory'><Button variant="contained" color="primary" disabled={!validateForm()} onClick={onClick}>Login</Button></Link>
+        <Link to ='/viewpathistory'><Button variant="contained" color="primary" disabled={!validateForm()} onClick={onClick}>Login</Button></Link>
           </div>
 
 

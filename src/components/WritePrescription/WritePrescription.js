@@ -97,13 +97,13 @@ function WritePrescription({data}) {
     <Container style={{backgroundColor:"white", opacity:"0.9"}}>
       
       <form className={classes.root} onSubmit={handleSubmit} style={{marginTop:"50px", padding:"20px"}}>
-            <TextField 
+            {/* <TextField 
               name="pId"
-              label="PA1234"
+              label={data}
               variant="filled"
               disabled inputProps={{ 'aria-label': 'description' }}
               
-            />
+            /> */}
 
             <TextField 
               name="symptoms"
@@ -186,7 +186,7 @@ function WritePrescription({data}) {
           color="primary" 
           type="submit" 
           onClick={handleSubmit}
-        ><Link to='/showpres'>Submit</Link></Button>
+        ><Link to='/'>Submit</Link></Button>
         
       </form>
     </Container>

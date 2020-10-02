@@ -116,10 +116,10 @@ class App extends React.Component {
                 <Route path='/patienthistory' component={PatientHistory}/>
                 <Route path='/writepres'><WritePrescription data={this.state.patId}/></Route>
                 <Route path='/showpres'><ShowPrescription data={this.state.presId}/></Route>
-                <Route path='/viewhistory' component={ViewHistory}/>
+                <Route path='/viewhistory'><ViewHistory sendData={this.getPatientLogin}/></Route>
                 <Route path='/writenewpres' component={WriteNewPres}/>
                 <Route path='/showprespharma'><ShowPrescriptionPharma sendData={this.getPatientLogin}/></Route>
-                <Route path='/viewpathistory'><ViewPatHistory /></Route>
+                <Route path='/viewpathistory'><ViewPatHistory patId={this.state.patId}/></Route>
                
               </Switch>
               

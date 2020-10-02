@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import Prescription from '../ShowPrescription/Prescription.json'
 import { makeStyles } from '@material-ui/core/styles';
@@ -23,10 +23,10 @@ const useStyles = makeStyles({
 
 
 
-export default function ShowPrescriptionPharma({patId}) {
+export default function ShowPrescriptionPharma({patId,patient}) {
     const classes = useStyles();
-    const [prescription, setPres] = React.useState()
-    //let dat={};
+    const [presData, setPres] = React.useState([{name:"", dosage:"", duration:""}])
+    
     // useEffect(()=>{
     //   const finalData = 
     //   {
@@ -44,24 +44,57 @@ export default function ShowPrescriptionPharma({patId}) {
     //         "Followupdetails":"",
     //         "Prescription":""}]
     //     }
+      
     //     axios.post(`http://localhost:8000/current_prescription`, finalData)
     //       .then(res=>{
-    //         // setPres(res.data.History[0].Prescription)
-    //        dat = res.data
+    //         setPres(res.data.History[0].Prescription)
+    //         console.log(presData)
     //       })
           
     // })
-     //console.log(dat)
-    
 
+    const finalData = 
+      {
+        "_id":patId,
+        "PatientName":"",
+        "Aadhar":"",
+        "Email":"",
+  
+        
+         "History":[{   
+            "Symptoms":"",
+            "Notes": "",
+            "Test":"",
+            "Furthercheckups":"",
+            "Followupdetails":"",
+            "Prescription":""}]
+        }
+        
+        // axios.post(`http://localhost:8000/current_prescription`, finalData)
+        //   .then(res=>{
+        //     console.log(res.data.History[0].Prescription)
+            
+        //   })
+          
+
+
+  // var oo = '{"name":"rohan}'
+  // var pp = JSON.parse(oo)
+  //console.log(pp)
+     
+  //console.log(patId[0])  
+  //chroconsole.log(Prescription[0])
+  //var obj = JSON.parse(patId)
+  console.log(patId)
   return (
       <div>
-    
+    {/* <h2>{patId.map((pat=>(pat.dosage)))}</h2>   */}
+    {/* <h2>{patId[0].name}</h2> */}
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Patient ID : PA1234</TableCell>
+            <TableCell>Patient ID : {patient}</TableCell>
             <TableCell align="right">Medicine</TableCell>
             <TableCell align="right">Dosage</TableCell>
             <TableCell align="right">Duration</TableCell>
@@ -70,7 +103,18 @@ export default function ShowPrescriptionPharma({patId}) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {Prescription.map((row) => (
+          {/* {Prescription.map((row) => (
+            <TableRow key={row.name}>
+              <TableCell component="th" scope="row">
+                <p></p>
+              </TableCell>
+                <TableCell align="right">{row.name}</TableCell>
+                <TableCell align="right">{row.dosage}</TableCell>
+                <TableCell align="right">{row.duration} days</TableCell>
+              
+            </TableRow>
+          ))} */}
+          {patId.map((row) => (
             <TableRow key={row.name}>
               <TableCell component="th" scope="row">
                 <p></p>

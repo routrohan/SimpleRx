@@ -25,6 +25,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+
+  "headers": {
+    "Access-Control-Allow-Origin": "*"
+  },
+
   "eslintConfig": {
     "extends": "react-app"
   },

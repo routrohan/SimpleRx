@@ -72,14 +72,13 @@ export default function PharmaDashboard({sendData}) {
   const classesform = useStylesform();
   const [patId, setPatId] = React.useState("");
   const [checkNum, setNum] = React.useState(0)
-  
+  const [finans, setAns] = React.useState([]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   
-  let finRes = {}
   function handleClick(){
     
     const finalData = 
@@ -102,17 +101,18 @@ export default function PharmaDashboard({sendData}) {
     .then(res=>{
       // console.log(res.data.History[0].Prescription)
        res.data === null? alert("Please enter valid Patient ID"):setNum(checkNum+1);
-       //finRes = res.data.History[0]
-
+      setAns([...res.data.History[0].Prescription])
+      console.log(res.data.History[0].Prescription)
     })
     
-    console.log(checkNum)
+    
+    //console.log(checkNum)
     // sendData(patId)
   }
   
   return (
     <div className={classes.root} style={{opacity:"0.95", backgroundColor: "rgb(255,255,255)"}}>
-
+    
       
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
@@ -126,7 +126,7 @@ export default function PharmaDashboard({sendData}) {
         <TextField id="outlined-basic" label="Patient ID" variant="outlined" style={{float:"left"}} onChange={e=>setPatId(e.target.value)} />
         <Button color="primary" variant="contained" size="large" style={{float:"left"}} onClick={handleClick}>Submit</Button>
         </form><br/><br/><br/><br/><br/>
-        {checkNum>0?<ShowPrescriptionPharma patId={patId}/>:null}
+        {checkNum>0?<ShowPrescriptionPharma patId={finans} patient={patId}/>:null}
         
       </TabPanel>
       <TabPanel value={value} index={1}>
